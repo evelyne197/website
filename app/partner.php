@@ -1,5 +1,5 @@
 <?php
-	$id = 'home';
+	$id = 'partner';
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -28,12 +28,12 @@
 					<?php include('./includes/navigation.php'); ?>
 				</div>
 				<div class="stage">
-					<img src="content/assets/1.jpg" />
+					<img src="content/assets/5.jpg" />
 				</div>
 			</div>
 		</header>
 		<main>
-			<?php include('./content/html/index.html'); ?>
+			<?php include('./content/html/partner.html'); ?>
 		</main>
 		<?php include('./includes/footer.php'); ?>
 		<script>

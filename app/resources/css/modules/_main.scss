@@ -3,9 +3,32 @@ body {
 	margin: 0;
 }
 
+h1, h2, h3, h4, p {
+	margin-bottom: 0;
+}
+
+h1 {
+	font-size: 1.5em;
+}
+
+h2 {
+	font-size: 1.2em;
+}
+
+h3 {
+	font-size: 18px;
+}
+
+h1 + p,
+h2 + p,
+h3 + p {
+	margin-top: 0.25em;
+}
+
 a {
 	text-decoration: none;
 	color: #532F2F;
+	color: #8a5b5b;
 
 	&:hover {
 		text-decoration: underline;
@@ -27,6 +50,21 @@ aside {
 }
 
 main {
-	max-width: 1200px;
-	margin: 40px auto 0;	
+	margin: 20px;
+	
+	@media (min-width: 768px) {
+		max-width: 1280px;
+		margin-top: 40px;
+	}
+	
+	@media (min-width: 1280px) {
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	
+	article {
+		max-width: 900px; /* for easier reading */
+	}
 }

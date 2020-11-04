@@ -20,9 +20,16 @@ header .hamburger {
 
 	.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
 		border-radius: 0;
+		background-color: #532F2F;
+		width: 34px;
+	}
+	
+	.hamburger-box {
+		width: 34px;
 	}
 
 	.hamburger-label {
+		display: none; /* remove if you wish to display label */
 		font-size: 16px;
 		margin-left: 5px;
 		font-weight: bold;

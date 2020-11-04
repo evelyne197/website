@@ -1,7 +1,6 @@
-nav {
+.navigation {
 	@media (max-width: 767px) {
 		flex: 0 0 100%;
-		margin-top: 20px;
 
 		.js & {
 			overflow: hidden;
@@ -11,27 +10,56 @@ nav {
 	}
 
 	@media (min-width: 768px) {
+		margin-left: 20px;
+		margin-top: 10px;
+		
 		.js & {
 			max-height: none !important; //used !important to overwrite max-height set by js
 		}
 	}
+	
+	@media (min-width: 1024px) {
+		margin-top: 40px;
+	}
 
 	ul {
 		list-style: none;
-		margin: 50px 0 0;
+		margin: 0;
 		padding: 0;
 
 		li {
 			line-height: 1;
 			margin-top: 15px;
 			font-size: 18px;
-
+			
 			a {
-				color: #fff;
+				svg {
+					fill: #532F2F;
+					vertical-align: -2px;
+					width: 0.9em;
+					height: 0.9em;
+					margin-right: 0.2em;
+					
+					@media (min-width: 768px) {
+						fill: #fff;
+					}
+				}
 			}
 					
 			@media (min-width: 768px) {
-
+				a {
+					color: #fff;
+				}
+				
+				&.selected a {
+					color: #efd4ac;
+					text-decoration: none;
+					cursor: default;
+					
+					svg {
+						fill: #efd4ac;
+					}
+				}
 			}
 
 		}

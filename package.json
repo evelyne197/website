@@ -10,10 +10,11 @@
 	"scripts": {
 		"precopy": "node bin/clean.js",
 		"copy": "node bin/copytmp.js",
+		"copyImages": "node bin/copyImages.js",
 		"sass": "node-sass app/resources/css -o .tmp/resources/css",
 		"hbs": "handlebars -e hbs -n myApp.templates app/resources/hbs -f ./.tmp/resources/js/handlebars.templates.js",
 		"watch": "node bin/watch-css.js",
-		"serve": "npm run copy && npm run sass && npm run hbs",
+		"serve": "npm run copy && npm run copyImages && npm run sass && npm run hbs",
 		"start": "npm run serve && npm run watch",
 		"build": "npm run serve && rollup -c && node bin/copydist.js && node bin/useref.js"
 	},

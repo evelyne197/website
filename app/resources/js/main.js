@@ -23,7 +23,7 @@ ready(function() {
 
 	//initialize navigation
 	const nav = new Navigation({
-		element: document.querySelector('header > nav')
+		element: document.querySelector('.navigation')
 	});
 
 	//hamburger button
