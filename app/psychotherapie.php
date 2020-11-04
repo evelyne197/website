@@ -28,7 +28,11 @@
 					<?php include('./includes/navigation.php'); ?>
 				</div>
 				<div class="stage">
-					<img src="content/assets/3.jpg" />
+					<picture>
+						<source media="(max-width: 767px)" srcset="content/assets/small/3.jpg">
+						<source media="(min-width: 768px)" srcset="content/assets/3.jpg">
+						<img src="content/assets/3.jpg" alt="">
+					</picture>
 				</div>
 			</div>
 		</header>
