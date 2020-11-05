@@ -2,7 +2,7 @@
 	$id = 'kontakt';
 ?>
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="de" id="<?=$id?>">
 	<head>
 		<meta charset="utf-8">
 		<title>Evelyne Severing | Psychotherapie in Trier</title>
