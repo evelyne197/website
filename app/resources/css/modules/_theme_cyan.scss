@@ -1,7 +1,7 @@
 $primaryColor: #136b75;
 $secondaryColor: #a0e1e8;
 
-#about, #kontakt {
+#about {
     header {
         @media (min-width: 768px) {
     		background: $primaryColor ;
@@ -33,6 +33,14 @@ $secondaryColor: #a0e1e8;
     }
 
     .navigation ul li {
+        a svg {
+            fill: $primaryColor;
+
+            @media (min-width: 768px) {
+                fill: #fff;
+            }
+        }
+
         @media (min-width: 768px) {
             a {
                 color: #fff;
