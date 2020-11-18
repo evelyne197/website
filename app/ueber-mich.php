@@ -29,9 +29,9 @@
 				</div>
 				<div class="stage">
 					<picture>
-						<source media="(max-width: 767px)" srcset="content/assets/small/2.jpg">
-						<source media="(min-width: 768px)" srcset="content/assets/2.jpg">
-						<img src="content/assets/2.jpg" alt="">
+						<source media="(max-width: 767px)" srcset="content/assets/small/3.jpg">
+						<source media="(min-width: 768px)" srcset="content/assets/3.jpg">
+						<img src="content/assets/3.jpg" alt="">
 					</picture>
 				</div>
 			</div>
