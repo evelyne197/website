@@ -1,40 +1,34 @@
 {
-	"name": "boilerplate",
-	"version": "1.0.0",
-	"description": "Boilerplate for Web projects",
+	"name": "Evelyne Severing",
+	"version": "2.0.0",
+	"description": "Website for Evelyne Severing",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/smohadjer/boilerplate"
+		"url": "https://github.com/evelyne197/evelyne197.github.io"
 	},
 	"license": "MIT",
 	"scripts": {
-		"precopy": "node bin/clean.js",
-		"copy": "node bin/copytmp.js",
-		"copyImages": "node bin/copyImages.js",
-		"sass": "node-sass app/resources/css -o .tmp/resources/css",
-		"hbs": "handlebars -e hbs -n myApp.templates app/resources/hbs -f ./.tmp/resources/js/handlebars.templates.js",
-		"watch": "node bin/watch-css.js",
-		"serve": "npm run copy && npm run copyImages && npm run sass && npm run hbs",
+		"precompile": "node node_modules/build/bin/clean.js",
+		"compile": "node node_modules/build/bin/compile.js",
+		"copy": "node node_modules/build/bin/copyPublic.js",
+		"copyDist": "node node_modules/build/bin/copydist.js",
+		"sass": "node node_modules/build/bin/sassTocss",
+		"hbs": "node node_modules/build/bin/hbs.js",
+		"watch": "node node_modules/build/bin/watch-content.js & node node_modules/build/bin/watch-css.js & node node_modules/build/bin/watch-js.js & node node_modules/build/bin/watch-img.js",
+		"useref": "node node_modules/build/bin/useref.js",
+		"serve": "npm run compile && npm run copy && npm run sass && npm run hbs",
 		"start": "npm run serve && npm run watch",
-		"build": "npm run serve && rollup -c && node bin/copydist.js && node bin/useref.js"
+		"build": "npm run serve && rollup -c && npm run copyDist && npm run useref"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.6.2",
-		"@babel/preset-env": "^7.6.2",
-		"concat": "^1.0.3",
-		"fs-extra": "^8.1.0",
-		"handlebars": "^4.7.6",
-		"node-sass": "^4.14.1",
-		"rimraf": "latest",
-		"rollup": "^1.25.1",
-		"rollup-plugin-babel": "^4.3.3",
-		"useref": "^1.4.2"
+		"build": "git://github.com/smohadjer/build.git#0.0.42",
+		"handlebars": "^4.7.7"
 	},
 	"dependencies": {
 		"hamburgers": "0.9.3",
 		"helpers": "git+https://github.com/smohadjer/helpers.git"
 	},
 	"engines": {
-		"node": ">=10.16.3"
+		"node": ">=16.13.0"
 	}
 }
