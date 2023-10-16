@@ -736,7 +736,7 @@ article, aside, main, details, figcaption, figure, footer, header, hgroup, menu,
   header {
     min-height: 298px;
     background: #532F2F;
-    max-height: 400px;
+    max-height: 450px;
     overflow: hidden;
     position: relative;
   }
@@ -774,6 +774,7 @@ header .logo:hover {
 header .stage {
   overflow: hidden;
   width: 100%;
+  aspect-ratio: 16/9;
 }
 header .stage img,
 header .stage picture {
@@ -784,6 +785,7 @@ header .stage picture {
   header .stage {
     width: 60%;
     margin-right: -5%;
+    aspect-ratio: unset;
   }
   header .stage::after {
     content: "";
@@ -801,10 +803,10 @@ header .stage picture {
 @media (min-width: 1024px) {
   header .stage {
     margin-right: 0;
-    margin-top: -30px;
+    margin-top: 0;
   }
   header .stage::after {
-    margin-left: -84px;
+    /*margin-left: -84px;*/
   }
 }
 
@@ -841,6 +843,11 @@ header .stage picture {
   line-height: 1;
   margin-top: 15px;
   font-size: 18px;
+}
+@media (min-width: 1024px) {
+  .navigation ul li {
+    font-size: 20px;
+  }
 }
 .navigation ul li a svg {
   fill: #532F2F;
